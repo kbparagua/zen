@@ -1,4 +1,4 @@
-Practices blah blah blah
+Zen blah blah blah
 =========
 
-conventions, patterns, and techniques
+principles, conventions, patterns, and techniques
