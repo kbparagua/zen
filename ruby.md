@@ -7,6 +7,8 @@
 * Prefer ' (single quote) over " (double quotes).
 
 * Prefer `object` or `[args*]` over url helpers.
+
   Example:
-  use `redirect_to @user` rather than `redirect_to user_path(@user)`.
-  use `redirect_to [:admin, @post]` rather than `redirect_to admin_post_path(@post)`
+  
+  * use `redirect_to @user` rather than `redirect_to user_path(@user)`.
+  * use `redirect_to [:admin, @post]` rather than `redirect_to admin_post_path(@post)`
