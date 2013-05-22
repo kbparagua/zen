@@ -9,3 +9,10 @@
   appName.global = 100;
   appName.fx = function(){};
   ```
+
+* Prepend jQuery objects with `$`.
+  
+  Example:
+  ```js
+  var $body = $('body');
+  ```
