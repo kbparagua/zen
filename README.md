@@ -53,4 +53,5 @@ principles, conventions, patterns, and techniques
 
 3. Always decide in favor of readability rather than shortness of code.
 4. Be careful on using too much metaprogramming. It is cool but it raises the complexity to a much higher level.
+5. Use logically named variables rather than long expressions on conditional statements.
 
