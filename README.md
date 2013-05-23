@@ -11,42 +11,42 @@ principles, conventions, patterns, and techniques
 
 ## General
 
-* Try your best to prevent nested conditional statements.
+1. Try your best to prevent nested conditional statements.
 
-Bad
-```ruby
-def foo arg
-  if arg.ni?
-    '' # empty string
-  else
-    if arg == 'hello world'
-      'hi'
-    else
-      'wtf'
+  ```ruby
+    # Bad
+    def foo arg
+      if arg.ni?
+        '' # empty string
+      else
+        if arg == 'hello world'
+          'hi'
+        else
+          'wtf'
+        end
+      end
     end
-  end
-end
-```
+    
+    
+    # Good
+    def foo arg
+      return '' if arg.nil?
+      
+      if arg == 'hello world'
+        'hi'
+      else
+        'wtf'
+      end
+    end
+  ```
 
-Good
-```ruby
-def foo arg
-  return '' if arg.nil?
+
+2. Use ternary operator `?:` for conditional statements with 1 liner bodies.
   
-  if arg == 'hello world'
-    'hi'
-  else
-    'wtf'
-  end
-end
-```
-
-* Use ternary operator `?:` for conditional statements with 1 liner bodies.
-
-```ruby
-def foo arg
-  return '' if arg.nil?
-  
-  arg == 'hello world' ? 'hi' : 'wtf'
-end
-```
+  ```ruby
+    def foo arg
+      return '' if arg.nil?
+      
+      arg == 'hello world' ? 'hi' : 'wtf'
+    end
+  ```
