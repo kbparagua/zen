@@ -50,3 +50,7 @@ principles, conventions, patterns, and techniques
       arg == 'hello world' ? 'hi' : 'wtf'
     end
   ```
+
+3. Always decide in favor of readability rather than shortness of code.
+4. Be careful on using too much metaprogramming. It is cool but it raises the complexity to a much higher level.
+
