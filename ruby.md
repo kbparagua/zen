@@ -12,3 +12,5 @@
   
   * use `redirect_to @user` rather than `redirect_to user_path(@user)`.
   * use `redirect_to [:admin, @post]` rather than `redirect_to admin_post_path(@post)`
+
+* Avoid using instance variables on Observers, because Observers are fucking singletons.
