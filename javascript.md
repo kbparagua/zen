@@ -1,8 +1,6 @@
 # Javascript
 
 * Use a global namespace for every app and put global variables under it.
-
-  Example:
   ```javascript
   window.appName = window['appName'] || {};
   
@@ -11,8 +9,6 @@
   ```
 
 * Prepend jQuery objects with `$`.
-  
-  Example:
   ```js
   var $body = $('body');
   ```
@@ -23,6 +19,7 @@
     var items = [1, 2 , 3, 4, 5, 6, 7, 8, 9, 10];
     
     // Bad
+    // Always computing length on each condition checking.
     for (var i = 0; i < items.length; i++){
       var item = items[i];
       console.log(item);
@@ -30,6 +27,7 @@
     
     
     // Good
+    // No length computation during condition checking.
     for (var i = 0, length = items.length; i < length; i++){
       var item = items[i];
       console.log(item);
