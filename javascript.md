@@ -13,7 +13,7 @@
   var $body = $('body');
   ```
 
-* When looping through items:
+* Looping through items:
 
   ```js
     var items = [1, 2 , 3, 4, 5, 6, 7, 8, 9, 10];
