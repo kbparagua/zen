@@ -40,3 +40,18 @@
       console.log(item);
     }
   ```
+  
+* Use `||` operator for to assign default value (must not be falsy).
+
+  ```js
+    // Bad
+    function setUsername(name){
+      this.username = name !== '' ? name : 'anonymous';
+    }
+    
+    
+    // Good
+    function setUsername(name){
+      this.username = 'anonymous' || name;
+    }
+  ```
