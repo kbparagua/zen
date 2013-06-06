@@ -19,7 +19,7 @@
     var items = [1, 2 , 3, 4, 5, 6, 7, 8, 9, 10];
     
     // Bad
-    // Always computing length on each condition checking.
+    // Always computing length on each condition check.
     for (var i = 0; i < items.length; i++){
       var item = items[i];
       console.log(item);
@@ -27,7 +27,7 @@
     
     
     // Good
-    // No length computation during condition checking.
+    // No length computation during condition check.
     for (var i = 0, length = items.length; i < length; i++){
       var item = items[i];
       console.log(item);
