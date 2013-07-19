@@ -1,4 +1,4 @@
-# Code Readability
+# Code Readability Rant
 
 ## Quotes
 
@@ -7,3 +7,10 @@
 
 * *Any fool can write code that a computer can understand. Good programmers write code that humans can understand.* 
   - Martin Fowler, Refactoring: Improving the Design of Existing Code
+
+
+## Why Do I Need To Care?
+
+F*ck you man! If you care for your team, then you need to care about your code readability.
+As a programmer, code is our main medium to communicate with our fellow programmers.
+Code is a communication medium! That's why it is called Programming LANGUAGE!
