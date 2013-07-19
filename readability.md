@@ -30,6 +30,6 @@ That's why it is called Programming **LANGUAGE**!
 2. Don't try to impress me!
 
   So you are trying to discombobulate and flabbergast me with your convoluted words!?
-  F*CK YOU! Don't ever do that. If you think you will appear smart doing that, NO,
+  F*CK YOU! Don't ever do that. If you think you will appear smart by doing that, NO,
   that only shows that you are an incosiderate dumb egocentric douchebag who is trying hard
   to gain respect from other people.
