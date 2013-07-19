@@ -9,8 +9,9 @@
   - Martin Fowler, Refactoring: Improving the Design of Existing Code
 
 
-## Why Do I Need To Care?
+## Why Do You Need To Care?
 
 F*ck you man! If you care for your team, then you need to care about your code readability.
 As a programmer, code is our main medium to communicate with our fellow programmers.
-Code is a communication medium! That's why it is called Programming LANGUAGE!
+That's why it is called Programming **LANGUAGE**!
+
