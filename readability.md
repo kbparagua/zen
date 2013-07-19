@@ -21,8 +21,15 @@ That's why it is called Programming **LANGUAGE**!
 1. Names are important!
 
   The names **Fuk Mi** and **Fuk Yu** are only acceptable for asians!
-  Don't be like those parents!
-  They are basically saying, *"I give you a silly name because I don't care about your future!"*
+  *"I'm giving you a silly name because I don't care about your future!"*
+  
+  It will last forever. So please take a considerate amount of time to think of a
+  name that will f*cking make sense!
   
 
 2. Don't try to impress me!
+
+  So you are trying to discombobulate and flabbergast me with your convoluted words!?
+  F*CK YOU! Don't ever do that. If you think you will appear smart doing that, NO,
+  that only shows that you are an incosiderate dumb egocentric douchebag who is trying hard
+  to gain respect from other people.
