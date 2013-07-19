@@ -25,3 +25,4 @@ That's why it is called Programming **LANGUAGE**!
   They are basically saying, *"I give you a silly name because I don't care about your future!"*
   
 
+2. Don't try to impress me!
