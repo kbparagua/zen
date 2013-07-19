@@ -15,3 +15,13 @@ F*ck you man! If you care for your team, then you need to care about your code r
 As a programmer, code is our main medium to communicate with our fellow programmers.
 That's why it is called Programming **LANGUAGE**!
 
+
+## Issues
+
+1. Names are important!
+
+  The names **Fuk Mi** and **Fuk Yu** are only acceptable for asians!
+  Don't be like those parents!
+  They are basically saying, *"I give you a silly name because I don't care about your future!"*
+  
+
