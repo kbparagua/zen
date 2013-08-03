@@ -11,43 +11,28 @@ principles, conventions, patterns, and techniques
 
 ## General
 
-1. Try your best to prevent nested conditional statements.
+1. Flat is better than nested.
 
   ```ruby
     # Bad
-    def foo arg
-      if arg.ni?
-        '' # empty string
-      else
-        if arg == 'hello world'
-          'hi'
-        else
-          'wtf'
-        end
-      end
-    end
-    
-    
-    # Good
-    def foo arg
-      return '' if arg.nil?
-      
+    if arg.nil?
+      '' # empty string
+    else
       if arg == 'hello world'
         'hi'
       else
         'wtf'
       end
     end
-  ```
-
-
-2. Use ternary operator `?:` for conditional statements with 1 liner bodies.
   
-  ```ruby
-    def foo arg
-      return '' if arg.nil?
-      
-      arg == 'hello world' ? 'hi' : 'wtf'
+    
+    # Good
+    return '' if arg.nil?
+    
+    if arg == 'hello world'
+      'hi'
+    else
+      'wtf'
     end
   ```
 
