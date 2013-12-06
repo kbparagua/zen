@@ -410,7 +410,16 @@ pre .chunk {
 <li>resources</li>
 </ul>
 </section>
-    <section class="slide"></section>
+    <section class="slide"><ul>
+<li>we limit ourselves with what Rails can do</li>
+<li>write shy codes; don&#39;t reveal to much</li>
+<li>write clean interfaces</li>
+<li>law of demeter</li>
+<li>contract</li>
+<li>cohesion</li>
+<li>name depending on context</li>
+</ul>
+</section>
     <section class="slide"><p><em>The secret to building large apps is never build large apps. Break your applications into small pieces. Then, assemble those testable, bite-sized pieces into your big application.</em></p>
 <p>-- Justin Meyer, author JavaScript MVC <a href="https://github.com/timoxley/best-practices#never-build-large-apps">(source)</a></p>
 </section>
@@ -427,6 +436,8 @@ pre .chunk {
     <section class="slide"><h1 id="mixin-">Mixin?</h1>
 </section>
     <section class="slide"><h1 id="concern-">Concern?</h1>
+</section>
+    <section class="slide"><h1 id="component-">Component?</h1>
 </section>
     <section class="slide"><h2 id="-wrong-https-dl-dropboxusercontent-com-u-2196080-wrong-gif-"><img src="https://dl.dropboxusercontent.com/u/2196080/wrong.gif" alt="Wrong"></h2>
 </section>
@@ -446,7 +457,7 @@ pre .chunk {
 </section>
     <section class="slide"><h1 id="decoupled">Decoupled</h1>
 </section>
-    <section class="slide"><h1 id="less-dependencies">Less Dependencies</h1>
+    <section class="slide"><h1 id="independent">Independent</h1>
 </section>
     <section class="slide"><h1 id="why-">Why?</h1>
 </section>
@@ -455,57 +466,73 @@ members are confused about responsibilities. Every change needs a meeting of the
 team, because any one of them might be affected.</em></p>
 <p>-- The Pragmatic Programmer, From Journeyman To Master - Chapter 2, Orthogonality</p>
 </section>
-    <section class="slide"><p><em>A system with units that are highly dependent with each other will soon be a legacy system.</em></p>
-<p>-- Anonymous</p>
+    <section class="slide"><h1 id="isolated-complexity">Isolated Complexity</h1>
 </section>
-    <section class="slide"><h1 id="how-">How?</h1>
+    <section class="slide"><h1 id="local-fix">Local Fix</h1>
 </section>
-    <section class="slide"><h2 id="isolate-complexity-as-much-as-possible-">Isolate complexity as much as possible.</h2>
-<p>(<a href="http://en.wikipedia.org/wiki/X_Window_System_protocols_and_architecture#Design_principles">Principles of X</a>)</p>
+    <section class="slide"><h1 id="code-reuse">Code Reuse</h1>
 </section>
-    <section class="slide"><h2 id="-isolate-complexity-as-much-as-possible-"><strong>Isolate</strong> complexity as much as possible.</h2>
-<ul>
-<li>Alone</li>
-<li>Separated</li>
-<li>Detached</li>
-<li>Loner</li>
-<li>Single</li>
-<li>Has No Close Friends</li>
-<li>Has No Friends At All</li>
-<li>Has No Idea About The Outside World</li>
+    <section class="slide"><h1 id="testable">Testable</h1>
+</section>
+    <section class="slide"><h2 id="-nice-https-dl-dropboxusercontent-com-u-2196080-nice-jpg-"><img src="https://dl.dropboxusercontent.com/u/2196080/nice.jpg" alt="Nice"></h2>
+</section>
+    <section class="slide"><h1 id="orthogonality">Orthogonality</h1>
+</section>
+    <section class="slide"><h2 id="two-or-more-things-are-orthogonal-if-changes-in-one-do-not-affect-any-of-the-others-">Two or more things are orthogonal if <strong>changes</strong> in one do not affect any of the others.</h2>
+</section>
+    <section class="slide"><h2 id="two-or-more-things-are-orthogonal-if-internal-changes-in-one-do-not-affect-any-of-the-others-">Two or more things are orthogonal if <strong>INTERNAL changes</strong> in one do not affect any of the others.</h2>
+</section>
+    <section class="slide"><h2 id="-crt-monitor-https-dl-dropboxusercontent-com-u-2196080-crt-jpg-"><img src="https://dl.dropboxusercontent.com/u/2196080/crt.jpg" alt="CRT Monitor"></h2>
+</section>
+    <section class="slide"><ul>
+<li>Cathode Ray Tube</li>
+<li>Vacuum Tube</li>
+<li>Electro Gun/Emitter</li>
+<li>Electron Beams</li>
 </ul>
 </section>
-    <section class="slide"><h2 id="isolate-complexity-as-much-as-possible-">Isolate <strong>complexity</strong> as much as possible.</h2>
-<ul>
-<li>Shit!</li>
-<li>WTF</li>
-<li>Pray for me.</li>
-<li>This is madness!</li>
-<li>How will I code this shit?!</li>
+    <section class="slide"><h2 id="-dafuq-https-dl-dropboxusercontent-com-u-2196080-dafuq-jpg-"><img src="https://dl.dropboxusercontent.com/u/2196080/dafuq.jpg" alt="Dafuq"></h2>
+</section>
+    <section class="slide"><h2 id="-lcd-monitor-https-dl-dropboxusercontent-com-u-2196080-lcd-jpg-"><img src="https://dl.dropboxusercontent.com/u/2196080/lcd.jpg" alt="LCD Monitor"></h2>
+</section>
+    <section class="slide"><ul>
+<li>Liquid Crystal</li>
+<li>Reflector</li>
+<li>2 Transparent Electrodes</li>
+<li>2 Polarizing Filters</li>
 </ul>
 </section>
-    <section class="slide"><h1 id="rails-web-app">Rails Web App</h1>
+    <section class="slide"><h2 id="-dafuq-https-dl-dropboxusercontent-com-u-2196080-dafuq-jpg-"><img src="https://dl.dropboxusercontent.com/u/2196080/dafuq.jpg" alt="Dafuq"></h2>
 </section>
-    <section class="slide"><h2 id="isolate-complexity">Isolate Complexity</h2>
-<ul>
-<li>Model - isolate business logic / database</li>
-<li>View - isolate user interface</li>
-<li>Controller - connect isolated modules (model &amp; view)</li>
-<li>Routes - isolate URL parsing/interpretation</li>
-</ul>
+    <section class="slide"><h1 id="no-need-to-know-that-">No need to know that!</h1>
 </section>
-    <section class="slide"><h2 id="as-much-as-possible-isolate-until-complexity-level-is-closer-to-the-meh-zone-and-farther-to-the-wtf-zone-">As much as possible, isolate until complexity level is closer to the <strong>Meh zone</strong> and farther to the WTF zone.</h2>
+    <section class="slide"><h2 id="-vga-https-dl-dropboxusercontent-com-u-2196080-vga-jpg-"><img src="https://dl.dropboxusercontent.com/u/2196080/vga.jpg" alt="VGA"></h2>
 </section>
-    <section class="slide"><h2 id="meh-zone">Meh Zone</h2>
-<ul>
-<li>I can finish this today.</li>
-<li>Give me an hour.</li>
-<li>That&#39;s it? <em>(Sarcastic voice)</em></li>
-<li>Meh.</li>
-</ul>
+    <section class="slide"><h2 id="-internal-changes-should-not-affect-others-as-long-as-the-external-interfaces-are-not-changed-"><strong>Internal changes</strong> should not affect others as long as the <strong>external interfaces</strong> are not changed.</h2>
 </section>
-    <section class="slide"><h1 id="stop-coding-in-rails">Stop Coding in Rails</h1>
+    <section class="slide"><pre><code>is_available = @item.status == Item::Status::ACTIVE</code></pre>
 </section>
+    <section class="slide"><h1 id="after-change-in-policy-">after change in policy...</h1>
+</section>
+    <section class="slide"><pre><code>is_available = @item.status == Item::Status::ACTIVE &amp;&amp; @item.owner.nil?</code></pre>
+</section>
+    <section class="slide"><h1 id="write-shy-code-">Write Shy Code!</h1>
+</section>
+    <section class="slide"><pre><code>class Item &lt; ActiveRecord::Base
+
+  def is_available?
+    self.status == Item::Status::ACTIVE &amp;&amp;
+    self.owner.nil?
+  end
+end
+
+@item.is_available?</code></pre>
+</section>
+    <section class="slide"><pre><code>
+</code></pre>
+<h1 id="stop-coding-in-rails">Stop Coding in Rails</h1>
+</section>
+    <section class="slide"></section>
     <section class="slide"><h1 id="code-in-ruby">Code in Ruby</h1>
 </section>
     <section class="slide"><h2 id="-dafuq-https-dl-dropboxusercontent-com-u-2196080-dafuq-jpg-"><img src="https://dl.dropboxusercontent.com/u/2196080/dafuq.jpg" alt="Dafuq"></h2>
