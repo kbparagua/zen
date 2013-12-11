@@ -402,10 +402,10 @@ pre .chunk {
 <li>Afraid of PORO?</li>
 <li>isolate complexity</li>
 <li>single responsibility</li>
+<li>do not use mixins</li>
 <li>cohesion</li>
 <li>clean interface</li>
 <li>law of demeter</li>
-<li>mechanism over policy</li>
 <li>conclusion</li>
 <li>resources</li>
 </ul>
@@ -510,6 +510,8 @@ team, because any one of them might be affected.</em></p>
 </section>
     <section class="slide"><h2 id="-internal-changes-should-not-affect-others-as-long-as-the-external-interfaces-are-not-changed-"><strong>Internal changes</strong> should not affect others as long as the <strong>external interfaces</strong> are not changed.</h2>
 </section>
+    <section class="slide"><h1 id="code">CODE</h1>
+</section>
     <section class="slide"><pre><code>is_available = @item.status == Item::Status::ACTIVE</code></pre>
 </section>
     <section class="slide"><h1 id="after-change-in-policy-">after change in policy...</h1>
@@ -519,7 +521,6 @@ team, because any one of them might be affected.</em></p>
     <section class="slide"><h1 id="write-shy-code-">Write Shy Code!</h1>
 </section>
     <section class="slide"><pre><code>class Item &lt; ActiveRecord::Base
-
   def is_available?
     self.status == Item::Status::ACTIVE &amp;&amp;
     self.owner.nil?
@@ -528,14 +529,37 @@ end
 
 @item.is_available?</code></pre>
 </section>
-    <section class="slide"><pre><code>
-</code></pre>
-<h1 id="stop-coding-in-rails">Stop Coding in Rails</h1>
+    <section class="slide"><h1 id="shy-code">Shy Code</h1>
+<ul>
+<li>Do not reveal too much</li>
+<li>Do not collaborate too much with others</li>
+<li>Hide Complexity</li>
+<li>Provide an intuitive public interface</li>
+</ul>
 </section>
-    <section class="slide"></section>
+    <section class="slide"><h1 id="how-to-start-">How To Start?</h1>
+</section>
+    <section class="slide"><h1 id="stop-coding-in-rails">Stop Coding in Rails</h1>
+</section>
     <section class="slide"><h1 id="code-in-ruby">Code in Ruby</h1>
 </section>
     <section class="slide"><h2 id="-dafuq-https-dl-dropboxusercontent-com-u-2196080-dafuq-jpg-"><img src="https://dl.dropboxusercontent.com/u/2196080/dafuq.jpg" alt="Dafuq"></h2>
+</section>
+    <section class="slide"><h1 id="fat-models-skinny-controllers">Fat Models, Skinny Controllers</h1>
+</section>
+    <section class="slide"><h1 id="put-everything-in-the-model-">Put everything in the model!!!</h1>
+</section>
+    <section class="slide"><h2 id="-wrong-https-dl-dropboxusercontent-com-u-2196080-wrong-gif-"><img src="https://dl.dropboxusercontent.com/u/2196080/wrong.gif" alt="Wrong"></h2>
+</section>
+    <section class="slide"><h2 id="rails">Rails</h2>
+<ul>
+<li>Framework</li>
+<li>Guide</li>
+<li>Skeleton</li>
+<li>Basic Structure</li>
+</ul>
+</section>
+    <section class="slide"><h1 id="rails-is-not-the-limit">Rails is NOT the LIMIT</h1>
 </section>
     <section class="slide"><h1 id="poro">PORO</h1>
 </section>
@@ -547,15 +571,17 @@ end
   end
 
 
-  def yeah!
+  def yeah
     # some code here
   end
 
 end</code></pre>
 </section>
-    <section class="slide"><h2 id="ruby-is-a-language-">Ruby is a <strong>Language</strong></h2>
-<h2 id="rails-is-a-framework-">Rails is a <strong>Framework</strong></h2>
+    <section class="slide"><h1 id="use-poro-to-create-modular-design">Use PORO to create modular design</h1>
 </section>
+    <section class="slide"><h1 id="examples">Examples</h1>
+</section>
+    <section class="slide"></section>
     <section class="slide"><h2 id="unix-philosophy">Unix Philosophy</h2>
 <ul>
 <li>Write simple parts connected by clean interfaces.</li>
@@ -613,8 +639,6 @@ end</code></pre>
     <section class="slide"><h1 id="wtf-">WTF?!!!!</h1>
 </section>
     <section class="slide"><h1 id="to-the-meh-zone-">To The Meh Zone!</h1>
-</section>
-    <section class="slide"><h1 id="write-a-parser">Write A Parser</h1>
 </section>
     <section class="slide"><div class="author">
   <h1 class="name">Karl Bryan Paragua</h1>
