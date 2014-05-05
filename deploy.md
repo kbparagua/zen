@@ -46,8 +46,10 @@
 
 http://vimeo.com/45927323
 
-- available only for Phusion Passenger Enterprise.
-
+- available in Phusion Passenger Enterprise.
+- available in Unicorn for free.
+  - https://github.com/blog/517-unicorn
+  - http://stackoverflow.com/questions/12995296/how-to-do-rolling-restart-with-unicorn
 
 
 ## Source
