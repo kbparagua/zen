@@ -39,31 +39,87 @@
   - for advanced rvm setup set additional deploy variables (`:rvm_type`, `:rvm_ruby_version`, `rvm_custom_path`)
 
 
-## Migration Issues
-
-
 ## Rolling Deploy/Restart
 
 http://vimeo.com/45927323
 
 1. Available in Phusion Passenger Enterprise.
-
   - meh.
   - $$$
 
 2. Can be achieved using Phusion Passenger + HAProxy
-
   - HAProxy is a load balancer.
   - Using load balancer is useless if we only have 1 server (where the application is deployed).
 
 
 3. Available in Unicorn for free.
-
   - https://github.com/blog/517-unicorn
   - http://stackoverflow.com/questions/12995296/how-to-do-rolling-restart-with-unicorn
 
+
+## Unicorn: Rolling Restart
+
+In `deploy.rb`:
+
+```ruby
+
+# This is where the actual deployment with Unicorn happens.
+namespace :deploy do
+  desc "Start the Unicorn process when it isn't already running."
+  task :start do
+    run "cd #{current_path} && #{current_path}/bin/unicorn -Dc #{shared_path}/config/unicorn.rb -E #{rails_env}"
+  end
+
+  desc "Initiate a rolling restart by telling Unicorn to start the new application code and kill the old process when done."
+  task :restart do
+    run "kill -USR2 $(cat #{shared_path}/pids/unicorn.pid)"
+  end
+
+  desc "Stop the application by killing the Unicorn process"
+  task :stop do
+    run "kill $(cat #{shared_path}/pids/unicorn.pid)"
+  end
+end
+
+```
+
+## Migration Issues
+
+**ActiveRecord caches table columns and uses this cache to build INSERT statements.**
+
+### Workarounds:
+
+- Adding columns
+  - Safe for readonly models
+  - Safe when there are no constraints on the column
+
+- Removing columns
+  - Safe for readonly models
+  - Tell AR to ignore the column first
+
+- Renaming columns
+  - Not safe
+  - First add a new column, then remove the old one
+  - When the column is used on SQL queries you’ll need to split this in three steps
+
+- Creating tables
+  - Safe
+
+- Removing tables
+  - Safe
+
+- Creating indexes
+  - Safe only for readonly models
+  - Otherwise make sure you create indexes concurrently
+
+- Removing indexes
+  - Safe
+
+
+SEE: http://pedro.herokuapp.com/past/2011/7/13/rails_migrations_with_no_downtime/
 
 ## Source
 
 * http://www.codinginthecrease.com/news_article/show/151984
 * http://pedro.herokuapp.com/past/2011/7/13/rails_migrations_with_no_downtime/
+* http://blog.intercityup.com/a-perfect-minimal-capistrano-deploy-rb-for-rails-and-unicorn-with-rolling-restarts/
