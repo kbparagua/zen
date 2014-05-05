@@ -49,6 +49,7 @@ http://vimeo.com/45927323
 1. Available in Phusion Passenger Enterprise.
 
   - meh.
+  - $$$
 
 2. Can be achieved using Phusion Passenger + HAProxy
 
