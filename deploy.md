@@ -13,6 +13,23 @@
   - run manually using `cap production bundler:install`.
 
 
+### `capistrano-rails`
+  
+  - runs Rails specific tasks.
+  - require in `Capfile`
+  
+    ```ruby
+    require 'capistrano/rails/assets'       # compile assets on deploy
+    require 'capistrano/rails/migrations'   # run migrations on deploy
+    ```
+
+  - run manually:
+  
+    ```ruby
+    cap deploy:migrate
+    cap deploy:compile_assets
+    ```
+
 ## Source
 
 * http://www.codinginthecrease.com/news_article/show/151984
