@@ -30,6 +30,14 @@
     cap deploy:compile_assets
     ```
 
+### `capistrano-rvm`
+  
+  - support for rvm.
+  - require in `Capfile`: `require 'capistrano/rvm'`.
+  - should work without any advance settings.
+  - for advanced rvm setup set additional deploy variables (`:rvm_type`, `:rvm_ruby_version`, `rvm_custom_path`)
+
+
 ## Source
 
 * http://www.codinginthecrease.com/news_article/show/151984
