@@ -46,8 +46,18 @@
 
 http://vimeo.com/45927323
 
-- available in Phusion Passenger Enterprise.
-- available in Unicorn for free.
+1. Available in Phusion Passenger Enterprise.
+
+  - meh.
+
+2. Can be achieved using Phusion Passenger + HAProxy
+
+  - HAProxy is a load balancer.
+  - Using load balancer is useless if we only have 1 server (where the application is deployed).
+
+
+3. Available in Unicorn for free.
+
   - https://github.com/blog/517-unicorn
   - http://stackoverflow.com/questions/12995296/how-to-do-rolling-restart-with-unicorn
 
