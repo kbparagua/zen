@@ -157,7 +157,9 @@ Any migration being deployed should be **compatible** with the **code that is al
 - Creating indexes
   - Safe only for readonly models
   - Otherwise make sure you create indexes concurrently
-
+  - Available for Rails 4 + PostgreSQL (http://robots.thoughtbot.com/how-to-create-postgres-indexes-concurrently-in)
+  - Available for MySQL  5.6 (https://blogs.oracle.com/mysqlinnodb/entry/online_alter_table_in_mysql)
+  
 - Removing indexes
   - Safe
 
