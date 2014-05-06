@@ -85,7 +85,53 @@ end
 
 ## Migration Issues
 
+
+```ruby
+class RemoveNotesFromUsers < ActiveRecord::Migration
+  def self.up
+    remove_column :users, :notes
+  end
+end
+```
+
+Error after migration: `PGError: ERROR: column "notes" does not exist`
+
+
 **ActiveRecord caches table columns and uses this cache to build INSERT statements.**
+
+### Solution:
+Any migration being deployed should be **compatible** with the **code that is already running**.
+
+
+### How?
+
+1. Write a patch to make the code compatible with the migration you need to run.
+2. Run the migration.
+3. Remove the patch.
+
+
+### Example
+
+1. Write a patch to make the code compatible with the migration you need to run.
+  ```ruby
+  class User
+    def self.columns
+      super.reject { |c| c.name == "notes" }
+    end
+  end
+  ```
+
+2. Run the migration.
+  `rake db:migrate`
+
+3. Remove any code written specifically for the migration. 
+  ```ruby
+  class User
+    # def self.columns
+    #   super.reject { |c| c.name == "notes" }
+    # end
+  end
+  ```
 
 ### Workarounds:
 
