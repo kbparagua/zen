@@ -23,6 +23,34 @@ Example:
   If `S` is a subtype of `T`, then objects of type `T` may be replaced with objects of type `S` without altering
   any of the desirable properties of that program *(correctness, task performed, etc.)*
 
+### Square-Rectangle Problem
+
+A `Square` class that derives from a `Rectangle` class, assuming getter and setter methods exist for both `width` and `height`. The `Square` class **always** assumes that the `width` is equal with the `height`. If a `Square` object is used in a context where a `Rectangle` is expected, unexpected behavior may occur because the dimensions of a `Square` cannot (or rather should not) be modified independently.
+
+```ruby
+class Rectangle
+  attr_accessor :width, :height
+  
+  def initialize width, height
+    self.width = width
+    self.height = height
+  end
+  
+  def doubleWidth
+    self.width *= 2 
+  end
+end
+
+
+class Square < Rectangle
+  def doubleWidth
+    self.width *= 2
+    self.height = self.width # also manipulates height
+  end
+end
+
+```
+
 
 ## Sources
 http://en.wikipedia.org/wiki/Liskov_substitution_principle
