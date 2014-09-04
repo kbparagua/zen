@@ -56,6 +56,9 @@ class Car
 end
 ```
 
+You can change the behavior of a class on run-time using composition and dependency injection.
+This will be very much useful when doing unit test.
+
 ## Composition or Inheritance
 
 ### Inheritance
