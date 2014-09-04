@@ -71,6 +71,27 @@ A `Biplane` will expose the complete interface of an `Airplane`. So, it makes pe
 
 A `Bird` may only need the `fly` behavior of an `Airplane`. In this case, it makes sense to extract it out and make it a member of both classes.
 
+
+## Both Make Sense?
+
+```ruby
+# Character is a PhysicsObject
+class Character < PhysicsObject
+end
+
+
+# Character uses a PhysicsObject
+class Character
+  def initialize
+    @physicsObject = PhysicsObject.new
+  end
+end
+```
+
+Inheritance is more intuitive?
+
+
+
 ## Liskov Substitution Principle
 
   If `S` is a subtype of `T`, then objects of type `T` may be replaced with objects of type `S` without altering
