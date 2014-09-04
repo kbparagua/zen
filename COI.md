@@ -22,3 +22,9 @@ Example:
 
   If `S` is a subtype of `T`, then objects of type `T` may be replaced with objects of type `S` without altering
   any of the desirable properties of that program *(correctness, task performed, etc.)*
+
+
+## Sources
+http://en.wikipedia.org/wiki/Liskov_substitution_principle
+http://stackoverflow.com/questions/49002/prefer-composition-over-inheritance
+http://en.wikipedia.org/wiki/Composition_over_inheritance
