@@ -17,6 +17,45 @@ Example:
 - `Car` is a `Vehicle`
 - `Person` is a `Mammal`
 
+## Composition and Dependency Injection
+
+Inheritance Approach:
+
+```ruby
+class Runnable 
+  def run
+    # Run 40km/h
+  end
+end
+
+class Car < Runnable
+end
+
+myCar = Car.new
+myCar.run
+```
+
+Composition Approach:
+
+```ruby
+class Engine
+  def start
+    # Run 40km/h
+  end
+end
+
+class Car
+  def initialize engine
+    @engine = engine
+  end
+  
+  
+  def run
+    @engine.start
+  end
+end
+```
+
 ## Composition or Inheritance
 
 ### Inheritance
