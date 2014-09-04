@@ -95,6 +95,9 @@ This strongly suggests that inheritance should never be used when the **sub-clas
 
 ## Mixin is an Inheritance Hack
 
+## Mantra
+
+If you are going to use Inheritance -- think again, chances are what you really need is composition.
 
 ## Sources
 - http://en.wikipedia.org/wiki/Liskov_substitution_principle
