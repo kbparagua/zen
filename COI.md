@@ -75,23 +75,32 @@ A `Bird` may only need the `fly` behavior of an `Airplane`. In this case, it mak
 ## Both Make Sense?
 
 ```ruby
-# Character is a PhysicsObject
-class Character < PhysicsObject
+# Enemy is a PhysicsObject
+class Enemy < PhysicsObject
+  def initialize
+    @health = 100
+  end
 end
 
 
-# Character uses a PhysicsObject
-class Character
+# Enemy uses a PhysicsObject
+class Enemy
   def initialize
     @physicsObject = PhysicsObject.new
+    @health = 100
   end
 end
 ```
 
 Inheritance is more intuitive?
 
+### The Twin Enemy
 
+- Two blocks conected by an energy chain.
+- Single health bar.
+- Blocks can move separately and have their own Pysics.
 
+![Twin Enemy](http://www.proun-game.com/Oogst3D/BLOG/Inheritance%20versus%20composition%20-%20Enemy.gif)
 ## Liskov Substitution Principle
 
   If `S` is a subtype of `T`, then objects of type `T` may be replaced with objects of type `S` without altering
