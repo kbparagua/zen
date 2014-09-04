@@ -62,6 +62,8 @@ end
 
 ```
 
+## Mixin is an Inheritance Hack
+
 
 ## Sources
 - http://en.wikipedia.org/wiki/Liskov_substitution_principle
