@@ -146,3 +146,4 @@ If you are going to use Inheritance -- think again, chances are what you really 
 - http://stackoverflow.com/questions/49002/prefer-composition-over-inheritance
 - http://en.wikipedia.org/wiki/Composition_over_inheritance
 - http://en.wikipedia.org/wiki/Circle-ellipse_problem
+- http://joostdevblog.blogspot.com/2014/07/why-composition-is-often-better-than.html
