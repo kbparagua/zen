@@ -67,7 +67,6 @@ end
 
 ```ruby
 class Person
-
   def walkNorth
     # walks north
   end
