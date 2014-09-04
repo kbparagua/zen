@@ -53,7 +53,7 @@ end
 
 
 ## Sources
-http://en.wikipedia.org/wiki/Liskov_substitution_principle
-http://stackoverflow.com/questions/49002/prefer-composition-over-inheritance
-http://en.wikipedia.org/wiki/Composition_over_inheritance
-http://en.wikipedia.org/wiki/Circle-ellipse_problem
+- http://en.wikipedia.org/wiki/Liskov_substitution_principle
+- http://stackoverflow.com/questions/49002/prefer-composition-over-inheritance
+- http://en.wikipedia.org/wiki/Composition_over_inheritance
+- http://en.wikipedia.org/wiki/Circle-ellipse_problem
