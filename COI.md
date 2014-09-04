@@ -62,6 +62,38 @@ end
 
 ```
 
+
+### Prisoner-Person Problem
+
+```ruby
+class Person
+
+  def walkNorth
+    # walks north
+  end
+  
+  
+  def walkSouth
+    # walks south
+  end
+end
+
+
+class Prisoner < Person
+  def walkNorth
+    # not allowed
+  end
+  
+  def walkSouth
+    # not allowed
+  end
+end
+```
+
+`Prisoner` is not allowed to walk in any direction, but the contract of the `Person` class states that a `Person` can.
+
+This strongly suggests that inheritance should never be used when the **sub-class restricts the freedom implicit in the base class**, but should only be used when the **sub-class adds extra detail to the concept represented by the base class** as in `Monkey` is an `Animal`.
+
 ## Mixin is an Inheritance Hack
 
 
