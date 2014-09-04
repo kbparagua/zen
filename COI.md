@@ -1,21 +1,20 @@
 # Composition Over Inheritance
 
-## Argument
-It is **easier to modify** a class through time if it favors composition over inheritance.
+## Questions
 
-## Composition
-- *"has a"* or *"uses a"* relationship
+- Why favor composition over inheritance?
+- When to choose inheritance?
 
-Example:
-- `Car` has an `Engine`
-- `Person` has a `Name`
+## Definitions
 
-## Inheritance
-- *"is a"* relationship
+- **Composition** - *"has a"* or *"uses a"* relationship
+  - `Car` has an `Engine`
+  - `Person` has a `Name`
 
-Example:
-- `Car` is a `Vehicle`
-- `Person` is a `Mammal`
+- **Inheritance** - *"is a"* relationship
+  - `Car` is a `Vehicle`
+  - `Person` is a `Mammal`
+
 
 ## Composition and Dependency Injection
 
