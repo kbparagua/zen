@@ -209,7 +209,9 @@ end
 
 ```
 
-## Rails
+## Rails STI
+
+**Inheritance**
 
 Simple `User` class.
 ```ruby
@@ -241,6 +243,9 @@ end
 class Business < User
 end
 ```
+
+- Normal users will have `nil` `industry` column.
+- `User` objects will have an `industry` and `industry=` methods.
 
 
 **Composition**
