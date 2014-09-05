@@ -16,15 +16,15 @@
   - `Person` is a `Mammal`
 
 
-## Ask Yourself
+## Should I use...
 
-### Should I use Inheritance?
+### Inheritance?
 
 - Does `Type B` wants to expose the complete interface *(all public methods)* of `Type A`, such that `Type B` can be used anywhere `Type A` is expected?
 
 A `Biplane` will expose the complete interface of an `Airplane`. So, it makes perfect sense to derive it from `Airplane`.
 
-### Should I use Composition?
+### Composition?
 - Does `Type B` wants only some of the behavior *(public methods)* of `Type A`?
 
 A `Bird` may only need the `fly` behavior of an `Airplane`. In this case, it makes sense to extract it out and make it a member of both classes.
