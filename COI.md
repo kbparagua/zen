@@ -96,7 +96,7 @@ This strongly suggests that inheritance should never be used when the **sub-clas
 
 ## Composition and Dependency Injection
 
-Inheritance Approach:
+**Inheritance**
 
 ```ruby
 class Runnable 
@@ -112,7 +112,7 @@ myCar = Car.new
 myCar.run
 ```
 
-Composition Approach:
+**Composition**
 
 ```ruby
 class Engine
@@ -133,21 +133,18 @@ class Car
 end
 ```
 
-You can change the behavior of a class on run-time using composition and dependency injection.
-This will be very much useful when doing unit test.
+You can **change** the behavior of a class on **run-time** using composition and dependency injection.
+This will be very much useful when doing unit **tests**.
 
+## Close Fight
 
-
-
-## Both Make Sense?
-
+**Inheritance**
 ```ruby
 class PhysicsObject
   def update
-    # Update physics
+    # update physics
   end
 end
-
 
 # Enemy is a PhysicsObject
 class Enemy < PhysicsObject
@@ -155,22 +152,34 @@ class Enemy < PhysicsObject
     @health = 100
   end
 end
+```
 
+**Composition**
+```ruby
+class PhysicsEngine
+  def update
+    # update physics
+  end
+end
 
-# Enemy uses a PhysicsObject
+# Enemy uses a PhysicsEngine
 class Enemy
   def initialize
-    @physicsObject = PhysicsObject.new
+    @physicsObject = PhysicsEngine.new
     @health = 100
   end
   
   def update_physics
-    @physicsObject.update
+    @physicsEngine.update
   end
 end
 ```
 
-Inheritance is more intuitive?
+1. Inheritance makes sense? Yes.
+2. Composition makes sense? Yes.
+3. What to choose? WTF.
+
+
 
 ### The Twin Enemy
 
