@@ -209,9 +209,7 @@ end
 
 ```
 
-## Rails STI
-
-**Inheritance**
+## Rails STI (Single Table Inheritance)
 
 Simple `User` class.
 ```ruby
@@ -244,11 +242,13 @@ class Business < User
 end
 ```
 
+### Side-effects
+
 - Normal users will have `nil` `industry` column.
 - `User` objects will have an `industry` and `industry=` methods.
 
 
-**Composition**
+### Composition Approach
 
 ```ruby
 #
@@ -266,6 +266,7 @@ end
 class User < ActiveRecord::Base
   has_one :account, :as => :account_holder
 end
+
 
 #
 # industry              :string
