@@ -242,7 +242,7 @@ class Business < User
 end
 ```
 
-### Side-effects
+### Weird Side-effects
 
 - Normal users will have `nil` `industry` column.
 - `User` objects will have an `industry` and `industry=` methods.
