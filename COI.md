@@ -195,8 +195,8 @@ class Enemy
 
   def initialize
     @health = 100
-    @physicsA = PhysicsObject.new
-    @physicsB = PhysicsObject.new
+    @physicsA = PhysicsEngine.new
+    @physicsB = PhysicsEngine.new
   end
   
   
