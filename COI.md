@@ -176,7 +176,7 @@ Inheritance is more intuitive?
 
 - Two blocks conected by an energy chain.
 - Single health bar.
-- Blocks can move separately and have their own Pysics.
+- Blocks can move separately and have their own Physics.
 
 ![Twin Enemy](http://www.proun-game.com/Oogst3D/BLOG/Inheritance%20versus%20composition%20-%20Enemy.gif)
 
