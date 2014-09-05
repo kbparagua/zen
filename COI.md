@@ -209,7 +209,38 @@ end
 
 ```
 
+## Rails
 
+Simple `User` class.
+```ruby
+#
+# name        :string
+# email       :string
+# password    :string
+#
+class User < ActiveRecord::Base
+end
+```
+
+Add a new kind of user that will represent a business.
+Just like an normal user it has a `name`, `email`, and `password`.
+But it has an additional field `industry`.
+
+Add an `industry` and `type` columns on the `users` table.
+```ruby
+#
+# name        :string
+# email       :string
+# password    :string
+# industry    :string
+# type        :string
+#
+class User < ActiveRecord::Base
+end
+
+class Business < User
+end
+```
 
 
 ## Summary
