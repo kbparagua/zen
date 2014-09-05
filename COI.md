@@ -243,6 +243,34 @@ end
 ```
 
 
+**Composition**
+
+```ruby
+#
+# name                  :string
+# email                 :string
+# password              :string
+# account_holder_id     :integer
+# account_holder_type   :string
+#
+class Account < ActiveRecord::Base
+  belongs_to :account_holder, :polymorhpic => true
+end
+
+
+class User < ActiveRecord::Base
+  has_one :account, :as => :account_holder
+end
+
+#
+# industry              :string
+#
+class Business < ActiveRecord::Base
+  has_one :account, :as => :account_holder
+end
+```
+
+
 ## Summary
 
 Inheritance is NOT bad and Composition is not always the correct approach.
