@@ -277,6 +277,33 @@ end
 ```
 
 
+### Composition Drawback
+
+
+```ruby
+
+class User < ActiveRecord::Base
+  
+  has_one :account, :as => :account_holder
+  
+  # Delegate
+  delegate :name, :to => :account
+
+
+  # Wrapper method
+  def email
+    self.account.email
+  end
+end
+
+
+user = User.first
+
+# Directly access using the `Account` object
+user.account.password
+```
+
+
 ## Summary
 
 Inheritance is NOT bad and Composition is not always the correct approach.
