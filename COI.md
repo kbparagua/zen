@@ -307,16 +307,14 @@ user.account.password
 ## Answers
 
 1. Why favor Composition over Inheritance?
-
-- Composition gives more flexibility on a class.
-- You can change the behavior of a class during run-time using composition and dependency injection.
-- Single Table Inheritance in Rails have weird side-effects (on some situations).
+  - Composition gives more flexibility on a class.
+  - You can change the behavior of a class during run-time using composition and dependency injection.
+  - Single Table Inheritance in Rails have weird side-effects (on some situations).
 
 2. When to choose Inheritance?
-
-- A class wants to use/expose all public methods of another class.
-- A sub-class doesn't change the behavior and definitions of the super class.
-- If inherting will pass the Liskov Substitution Principle.
+  - A class wants to use/expose all public methods of another class.
+  - A sub-class doesn't change the behavior and definitions of the super class.
+  - If inherting will pass the Liskov Substitution Principle.
 
 
 ## Final Words
