@@ -304,10 +304,25 @@ user.account.password
 ```
 
 
-## Summary
+## Answers
 
-Inheritance is NOT bad and Composition is not always the correct approach.
-If you are going to use Inheritance -- think about Liskov Substitution Principle.
+1. Why favor Composition over Inheritance?
+
+- Composition gives more flexibility on a class.
+- You can change the behavior of a class during run-time using composition and dependency injection.
+- Single Table Inheritance in Rails have weird side-effects (on some situations).
+
+2. When to choose Inheritance?
+
+- A class wants to use/expose all public methods of another class.
+- A sub-class doesn't change the behavior and definitions of the super class.
+- If inherting will pass the Liskov Substitution Principle.
+
+
+## Final Words
+
+- Inheritance is NOT bad and Composition is not always the correct approach.
+- Inheritance is a tighter relationship compared to Composition, so think twice before using it.
 
 ## Sources
 - http://en.wikipedia.org/wiki/Liskov_substitution_principle
