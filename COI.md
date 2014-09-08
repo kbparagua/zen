@@ -108,13 +108,13 @@ This strongly suggests that inheritance should never be used when the **sub-clas
 **Inheritance**
 
 ```ruby
-class Runnable 
+class Vehicle
   def run
     # Run 40km/h
   end
 end
 
-class Car < Runnable
+class Car < Vehicle
 end
 
 myCar = Car.new
@@ -220,22 +220,6 @@ end
 
 ## Rails STI (Single Table Inheritance)
 
-Simple `User` class.
-```ruby
-#
-# name        :string
-# email       :string
-# password    :string
-#
-class User < ActiveRecord::Base
-end
-```
-
-Add a new kind of user that will represent a business.
-Just like an normal user it has a `name`, `email`, and `password`.
-But it has an additional field `industry`.
-
-Add an `industry` and `type` columns on the `users` table.
 ```ruby
 #
 # name        :string
@@ -247,9 +231,15 @@ Add an `industry` and `type` columns on the `users` table.
 class User < ActiveRecord::Base
 end
 
+
 class Business < User
 end
 ```
+
+- `name`, `email`, and `password` are common between `User` and `Business` models.
+- `industry` attribute is for `Business` instances only.
+- `type` is used by Rails to evaluate in which model the record belongs.
+
 
 ### Weird Side-effects
 
