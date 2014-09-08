@@ -41,23 +41,32 @@ A `Square` class that derives from a `Rectangle` class, assuming getter and sett
 
 ```ruby
 class Rectangle
-  attr_accessor :width, :height
+  attr_reader :width, :height
   
   def initialize width, height
-    self.width = width
-    self.height = height
+    @width = width
+    @height = height
   end
   
-  def doubleWidth
-    self.width *= 2 
+  def width= value
+    @width = value
+  end
+  
+  def height= value
+    @height = value
   end
 end
 
 
 class Square < Rectangle
-  def doubleWidth
-    self.width *= 2
-    self.height = self.width # also manipulates height
+  def width= value
+    @width = value
+    @height = value
+  end
+  
+  def height= value
+    @height = value
+    @width = value
   end
 end
 
