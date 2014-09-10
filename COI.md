@@ -174,7 +174,7 @@ end
 # Enemy uses a PhysicsEngine
 class Enemy
   def initialize
-    @physicsObject = PhysicsEngine.new
+    @physicsEngine = PhysicsEngine.new
     @health = 100
   end
   
