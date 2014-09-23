@@ -1,6 +1,6 @@
 # Zen
 
-Thoughts and issues on software engineering.
+Thoughts on software engineering.
 
 ## Quotes
 
