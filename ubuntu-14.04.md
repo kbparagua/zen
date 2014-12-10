@@ -41,5 +41,9 @@
   su <username>
   ```
 
+1. Install MySQL
 
+  ```
+  sudo apt-get install mysql-server mysql-client
+  ```
   
