@@ -21,6 +21,14 @@
   rbenvn install <latest ruby version>
   ```
 
+1. Install Bundler.
+
+  ```
+  git clone -- https://github.com/carsomyr/rbenv-bundler.git ~/.rbenv/plugins/bundler
+  gem install bundler
+  rbenv bundler on
+  ```
+
 1. Install Sublime Text 2.
 
   ```
