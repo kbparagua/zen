@@ -29,3 +29,17 @@
   sudo apt-get install sublime-text
   ```
   
+1. Install PostgreSQL
+
+  ```
+  sudo apt-get update
+  sudo apt-get install postgresql postgresql-contrib
+  
+  sudo -i -u postgres
+  createuser --interactive
+  createdb <username>
+  su <username>
+  ```
+
+
+  
