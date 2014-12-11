@@ -61,3 +61,8 @@
   sudo apt-get install mtpfs
   ```
   
+1. Install VLC
+
+  ```
+  sudo apt-get install vlc
+  ```
