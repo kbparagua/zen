@@ -55,3 +55,9 @@
   sudo apt-get install mysql-server mysql-client
   ```
   
+1. Install `mtpfs` for reading phones
+
+  ```
+  sudo apt-get install mtpfs
+  ```
+  
