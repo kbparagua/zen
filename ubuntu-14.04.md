@@ -14,6 +14,19 @@
   git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
   ```
 
+1. Generate SSH key.
+
+  ```
+  cd ~/.ssh
+  ssh-keygen -t rsa -C "email@email.com"
+  ```
+
+1. Add SSH key to github account (https://github.com/settings/ssh)
+
+  ```
+  cat ~/.ssh/id_rsa.pub
+  ```
+
 1. Install latest ruby.
 
   ```
