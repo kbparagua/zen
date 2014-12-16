@@ -62,6 +62,13 @@
   su <username>
   ```
 
+1. Install PostgreSQL dev package
+
+  ```
+  sudo apt-get install libpq-dev
+  ```
+
+
 1. Install MySQL
 
   ```
