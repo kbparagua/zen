@@ -18,5 +18,11 @@ Thoughts on software engineering.
 3. Rewrite it if you need long comments to make it readable.
 4. If you can't properly name a method or a variable, then you don't understand what it is.
 5. Respect other's preference of solving a problem. Not everyone thinks the same way as you.
+6. If you don't know, ask away!
+7. Company goal above all.
+8. Do not panic. Breath, think, and consult before making any critical actions.
+9. Leave work at the office.
+10. Build tools to make your everyday work easier.
+11. Trust your co-workers. They know their shit.
 
-TODO: Organize and simplify this.
+*TODO: Organize and simplify this.*
