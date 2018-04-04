@@ -12,10 +12,11 @@ Thoughts on software engineering.
 
 - [Composition over Inheritance](https://github.com/kbparagua/zen/blob/master/COI.md)
 
-## Principles
+## Random Principles
 1. As much as possible choose readability over performance. *(increase productivity of developers not machines.)*
 2. Really need that performance boost? Think twice if it's really worth it to sacrifice readability.
 3. Rewrite it if you need long comments to make it readable.
 4. If you can't properly name a method or a variable, then you don't understand what it is.
+5. Respect other's preference of solving a problem. Not everyone thinks the same way as you.
 
-TODO: Organize this.
+TODO: Organize and simplify this.
